@@ -1,0 +1,52 @@
+The OpenEngine Repository Directory
+======================================================================
+
+This directory contains the darcs repositories for OpenEngine.
+
+* Installing Repositories
+
+  To install a new repository you must use darcs to upload it to
+  daimi.
+
+  $ darcs put user@fh.daimi.au.dk:/users/cgd/code/projects/MyProject
+
+  After that you must login to daimi and execute the repo-install
+  script. This will make the repository editable for other daimi
+  users.
+
+  $ ssh user@fh.daimi.au.dk
+  $ /users/cgd/bin/repo-install /users/cgd/code/projects/MyProject
+
+  Your repository is now ready to be used by others :)
+
+
+* Directory Structure
+
+openengine/
+  This is the heart of OpenEngine. You will need a copy of this
+  repository to work on OpenEngine.
+
+  $ darcs get user@fh.daimi.au.dk:/users/cgd/code/openengine
+
+extensions/
+  Many of the various extensions for OpenEngine are in this folder.
+  More info can be found at: http://openengine.dk/wiki/Extensions
+
+projects/
+  Many of the various project build on OpenEngine are in this folder.
+  More info can be found at: http://openengine.dk/wiki/Projects
+
+branches/
+  Working branches of the main repository, extensions and projects are
+  placed in this folder. These copies should be considered very
+  unstable (as should all of OpenEngine ;)
+  When working on new features you should create a branch here if you
+  intend to work others during the development.
+
+  Please prefix all branched repositories with a branch-id. This will
+  make it easy for others to see which repositories belong to the
+  branch. For example:
+    myfeature-main
+    myfeature-opengl
+    myfeature-sdl
+
